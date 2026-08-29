@@ -792,7 +792,7 @@ export default function Home() {
         {/* Form Section */}
         <section className="bg-white p-6 rounded-2xl shadow-md border border-slate-300 h-fit">
           <h2 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b pb-2">
-            <PlusCircle className="w-5 h-5 text-emerald-600" /> አዲስ የብድር መዝገብ
+            <PlusCircle className="w-5 h-5 text-emerald-600" /> የብድር መመዝገቢያ
           </h2>
           
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -844,7 +844,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">የ፩ ኪሎ ዋጋ (ብር)</label>
+                <label className="block text-xs font-bold text-slate-700 mb-1">የኪሎ ዋጋ</label>
                 <input
                   type="number"
                   required
@@ -894,7 +894,7 @@ export default function Home() {
             <Search className="w-5 h-5 text-slate-500" />
             <input
               type="text"
-              placeholder="በስም ፈልግ..."
+              placeholder="Search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full bg-transparent border-none text-slate-900 font-medium text-sm outline-none"
@@ -916,7 +916,7 @@ export default function Home() {
                       📅 {item.dayName}፣ {item.ethiopianDate}
                     </span>
                     <span className="text-slate-500 font-normal">
-                      🌐 ፈረንጅ፡ {item.gregorianDate}
+                      📅  {item.gregorianDate}
                     </span>
                   </div>
 
@@ -968,7 +968,7 @@ export default function Home() {
                       <div className="space-y-1">
                         {item.paymentsHistory.map((h) => (
                           <div key={h.id} className="text-[11px] flex justify-between bg-emerald-50/50 px-2 py-1 rounded text-slate-700 border border-emerald-100">
-                            <span>ከፈል፡ {h.ethiopianDate}</span>
+                            <span>የተከፈለበት ቀን፡ {h.ethiopianDate}</span>
                             <span className="font-bold text-emerald-800">+{h.amount.toLocaleString()} ብር</span>
                           </div>
                         ))}
@@ -983,7 +983,7 @@ export default function Home() {
                         onClick={() => setSelectedRecord(item)}
                         className="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-300 px-4 py-2 rounded-xl text-xs font-bold transition-all active:scale-95"
                       >
-                        <Wallet className="w-4 h-4 text-emerald-700" /> አዲስ ክፍያ መዝግብ
+                        <Wallet className="w-4 h-4 text-emerald-700" /> የሚከፈል ዕዳ 
                       </button>
                     </div>
                   )}
@@ -1022,7 +1022,7 @@ export default function Home() {
                   type="number"
                   required
                   max={selectedRecord.remainingAmount}
-                  placeholder="ምሳሌ፡ 1700"
+                  placeholder=""
                   value={newPaymentAmount}
                   onChange={(e) => setNewPaymentAmount(e.target.value === "" ? "" : Number(e.target.value))}
                   className="w-full p-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-900 text-sm focus:bg-white focus:border-emerald-600 outline-none transition-all font-bold"
