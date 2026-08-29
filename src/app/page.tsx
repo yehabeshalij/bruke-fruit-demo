@@ -801,7 +801,7 @@ export default function Home() {
               <input
                 type="text"
                 required
-                placeholder="ምሳሌ፡ አበበ ከበደ"
+                placeholder="ስም"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
                 className="w-full p-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-900 text-sm focus:bg-white focus:border-emerald-600 outline-none transition-all font-medium"
@@ -823,7 +823,7 @@ export default function Home() {
                 <label className="block text-xs font-bold text-slate-700 mb-1">የአትክልት ዓይነት</label>
                 <input
                   type="text"
-                  placeholder="ምሳሌ፡ ቲማቲም"
+                  placeholder="ምሳሌ፡ አቮካዶ"
                   value={itemType}
                   onChange={(e) => setItemType(e.target.value)}
                   className="w-full p-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-900 text-sm focus:bg-white focus:border-emerald-600 outline-none transition-all font-medium"
@@ -837,7 +837,7 @@ export default function Home() {
                 <input
                   type="number"
                   required
-                  placeholder="0.00"
+                  placeholder="0.00 ኪሎ"
                   value={weightKg}
                   onChange={(e) => setWeightKg(e.target.value === "" ? "" : Number(e.target.value))}
                   className="w-full p-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-900 text-sm focus:bg-white focus:border-emerald-600 outline-none transition-all font-medium"
@@ -848,7 +848,7 @@ export default function Home() {
                 <input
                   type="number"
                   required
-                  placeholder="0.00"
+                  placeholder="0.00 ብር"
                   value={pricePerKg}
                   onChange={(e) => setPricePerKg(e.target.value === "" ? "" : Number(e.target.value))}
                   className="w-full p-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-900 text-sm focus:bg-white focus:border-emerald-600 outline-none transition-all font-medium"
